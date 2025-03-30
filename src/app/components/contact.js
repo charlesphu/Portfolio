@@ -1,17 +1,7 @@
 "use client";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import EmailIcon from "@mui/icons-material/Email";
-// import PhoneIcon from "@mui/icons-material/Phone";
-import {
-  Box,
-  Button,
-  Divider,
-  Icon,
-  IconButton,
-  Stack,
-  Typography,
-} from "@mui/material";
+import { GithubIconButton, LinkedInIconButton, EmailIconButton } from "./icons";
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import { Box, Divider, Stack, Typography } from "@mui/material";
 
 export default function Contact() {
   return (
@@ -22,6 +12,7 @@ export default function Contact() {
           bgcolor: "yellow",
           display: "flex",
           flexDirection: "column",
+          color: "black",
         }}
       >
         <Box
@@ -31,48 +22,64 @@ export default function Contact() {
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
+            padding: "2rem",
           }}
         >
-          <Typography
-            variant="h1"
-            sx={{
-              fontSize: "4rem",
-              color: "white",
-              fontWeight: "bold",
-              textAlign: "center",
-            }}
-          >
-            Contact Me
+          <Typography variant="h1">Contact Me</Typography>
+          <Typography variant="body1" sx={{ padding: "1rem" }}>
+            Feel free to reach out to me through any of the platforms below. I
+            look forward to connecting with you!
           </Typography>
-          <Typography>Email: charlesphu18@gmail.com</Typography>
-          <Typography>Phone: (+1) 510-458-1787</Typography>
-          <Divider sx={{ width: "50%", margin: "2rem 0" }} />
-          <Stack direction="row" spacing={5} sx={{ justifyContent: "center" }}>
-            <IconButton
-              onClick={() =>
-                window.open("https://github.com/charlesphu", "_blank")
-              }
-            >
-              <GitHubIcon />
-            </IconButton>
-            <IconButton
-              onClick={() =>
-                window.open(
-                  "https://www.linkedin.com/in/charles--phu-/",
-                  "_blank"
-                )
-              }
-            >
-              <LinkedInIcon />
-            </IconButton>
-            <IconButton
-              onClick={() =>
-                window.open("mailto:charlesphu18@gmail.com", "_blank")
-              }
-            >
-              <EmailIcon />
-            </IconButton>
-            {/* <PhoneIcon></PhoneIcon> */}
+          <Stack direction="column" spacing={0} sx={{ marginBottom: "2rem" }}>
+            <Typography variant="body2" sx={{ textDecoration: "underline" }}>
+              <GithubIconButton url="https://github.com/charlesphu" />
+              <a
+                href="https://github.com/charlesphu"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "blue", textDecoration: "none" }}
+              >
+                github.com/charlesphu
+              </a>
+            </Typography>
+            <Typography variant="body2" sx={{ textDecoration: "underline" }}>
+              <LinkedInIconButton />
+              <a
+                href="https://www.linkedin.com/in/charles--phu-/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "blue", textDecoration: "none" }}
+              >
+                linkedin.com/in/charles--phu-
+              </a>
+            </Typography>
+            <Typography sx={{ textDecoration: "underline" }}>
+              <EmailIconButton />
+              <a
+                href="mailto:charlesphu18@gmail.com"
+                rel="noopener noreferrer"
+                style={{ color: "blue", textDecoration: "none" }}
+              >
+                charlesphu18@gmail.com
+              </a>
+            </Typography>
+            <Typography>
+              {" "}
+              <LocalPhoneIcon />
+              <a
+                href="tel:+1510-458-1787"
+                rel="noopener noreferrer"
+                style={{ color: "blue", textDecoration: "none" }}
+              >
+                (+1) 510-458-1787
+              </a>
+            </Typography>
+          </Stack>
+          <Divider sx={{ width: "50%", margin: "2rem 0", bgcolor: "black" }} />
+          <Stack direction="row" spacing={3} sx={{ justifyContent: "center" }}>
+            <GithubIconButton url="https://github.com/charlesphu" />
+            <LinkedInIconButton />
+            <EmailIconButton />
           </Stack>
         </Box>
       </Box>
