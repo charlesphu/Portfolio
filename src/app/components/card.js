@@ -9,15 +9,8 @@ import {
   Box,
   Stack,
 } from "@mui/material";
-import { GithubIconButton, WebsiteIconButton } from "./icons";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import EmailIcon from "@mui/icons-material/Email";
-import IconButton from "@mui/material/IconButton";
+import { GithubIconButton } from "./icons";
 import LanguageIcon from "@mui/icons-material/Language";
-import { Lan } from "@mui/icons-material";
 
 export function CardComponent({
   name,

@@ -1,5 +1,10 @@
 "use client";
-import { GithubIconButton, LinkedInIconButton, EmailIconButton } from "./icons";
+import {
+  GithubIconButton,
+  LinkedInIconButton,
+  EmailIconButton,
+  Iconbar,
+} from "./icons";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import { Box, Divider, Stack, Typography } from "@mui/material";
 
@@ -76,11 +81,7 @@ export default function Contact() {
             </Typography>
           </Stack>
           <Divider sx={{ width: "50%", margin: "2rem 0", bgcolor: "black" }} />
-          <Stack direction="row" spacing={3} sx={{ justifyContent: "center" }}>
-            <GithubIconButton url="https://github.com/charlesphu" />
-            <LinkedInIconButton />
-            <EmailIconButton />
-          </Stack>
+          <Iconbar />
         </Box>
       </Box>
     </Box>

@@ -1,12 +1,13 @@
 import Box from "@mui/material/Box";
 import { AppBar, Button, Divider, Stack, Typography } from "@mui/material";
+import { Iconbar } from "./icons";
 export default function Intro() {
   return (
     <Box sx={{ width: "100%" }}>
       <Box
         sx={{
           minHeight: "100vh",
-          bgcolor: "black",
+          bgcolor: "#FFF0DC",
           display: "flex",
           flexDirection: "column",
         }}
@@ -59,13 +60,21 @@ export default function Intro() {
         >
           <Typography
             variant="h1"
-            sx={{ color: "white", fontFamily: "Merriweather" }}
+            sx={{ color: "#543A14", fontFamily: "Merriweather" }}
           >
             Charles Phu
           </Typography>
-          <Typography variant="h2" sx={{ color: "white" }}>
+          <Typography variant="h2" sx={{ color: "#543A14" }}>
             Software Engineer
           </Typography>
+          <Divider
+            sx={{
+              bg: "#F0BB78",
+              width: "50%",
+              margin: "2rem 0",
+            }}
+          />
+          <Iconbar />
         </Box>
       </Box>
     </Box>
