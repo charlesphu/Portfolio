@@ -7,12 +7,17 @@ import {
   Button,
   Chip,
   Box,
-  IconButton,
   Stack,
 } from "@mui/material";
 import { GithubIconButton, WebsiteIconButton } from "./icons";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import EmailIcon from "@mui/icons-material/Email";
+import IconButton from "@mui/material/IconButton";
+import LanguageIcon from "@mui/icons-material/Language";
+import { Lan } from "@mui/icons-material";
 
 export function CardComponent({
   name,
@@ -33,22 +38,27 @@ export function CardComponent({
   return (
     <Box
       sx={{
-        bgcolor: "black",
-        width: "80%",
-        maxHeight: "33vh",
+        width: "100%",
+        maxHeight: "600px",
+        overflow: "auto",
       }}
     >
       <Card
         sx={{
           backgroundColor: "grey",
-          width: "100%",
-          height: "100%",
+          display: "flex",
+          flexDirection: "column",
+          padding: "15px",
+          overflow: "auto",
+          borderRadius: "10px", // Adds rounded edges
         }}
       >
         <Box
           sx={{
-            maxHeight: "30%",
+            maxHeight: "70%",
             alignContent: "center",
+            display: "flex",
+            justifyContent: "center",
           }}
         >
           <CardMedia
@@ -56,10 +66,11 @@ export function CardComponent({
             image="/SpeedfillHomePage.png"
             alt="Preview"
             sx={{
-              width: "100%", // Ensures the image scales to its container
-              maxWidth: "1000px", // Optional: Limits the max width
-              height: "auto", // Maintains aspect ratio
-              objectFit: "cover", // Optional: Ensures it fills the container if needed
+              maxWidth: "640px",
+              maxHeight: "480px",
+              height: "auto",
+              objectFit: "cover",
+              borderRadius: "4px", // Adds rounded edges
             }}
           />
         </Box>
@@ -81,20 +92,17 @@ export function CardComponent({
               ))}
             </Box>
             <Box
-              sx={{ display: "flex", justifyContent: "space-between", mt: 3 }}
+              sx={{
+                display: "flex",
+                justifyContent: "space-between",
+                mt: 3,
+                width: "100%", // Ensures proper spacing
+              }}
             >
-              <Typography>
-                <WebsiteIconButton url={websiteURL} />
-                <a href={websiteURL} target="_blank" rel="noopener noreferrer">
-                  Website
-                </a>
-              </Typography>
-              <Typography>
-                <GithubIconButton url={sourceURL} />
-                <a href={sourceURL} target="_blank" rel="noopener noreferrer">
-                  Source
-                </a>
-              </Typography>
+              <Button variant="contained" startIcon={<LanguageIcon />}>
+                {websiteURL}
+              </Button>
+              <GithubIconButton url={sourceURL} />
             </Box>
           </CardContent>
         </Box>

@@ -7,10 +7,10 @@ export default function Home() {
   return (
     <html style={{ height: "100%" }}>
       <body style={{ height: "100%", margin: 0 }}>
-        {/* <Intro />
-        <AboutMe /> */}
-        <Projects />
-        {/* <Contact /> */}
+        {/* <Intro /> */}
+        <AboutMe />
+        {/* <Projects />
+        <Contact /> */}
       </body>
     </html>
   );
