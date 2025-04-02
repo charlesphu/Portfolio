@@ -120,14 +120,16 @@ export function CardComponent({
                 width: "100%", // Ensures proper spacing
               }}
             >
-              <Button
-                variant="contained"
-                startIcon={<LanguageIcon />}
-                sx={{ bgcolor: "#3B3D54", borderRadius: 3, color: "#F5F5F5" }}
-              >
-                {websiteURL}
-              </Button>
-              <GithubIconButton url={sourceURL} />
+              {websiteURL && (
+                <Button
+                  variant="contained"
+                  startIcon={<LanguageIcon />}
+                  sx={{ bgcolor: "#3B3D54", borderRadius: 3, color: "#F5F5F5" }}
+                >
+                  {websiteURL}
+                </Button>
+              )}
+              {sourceURL && <GithubIconButton url={sourceURL} />}
             </Box>
           </CardContent>
         </Box>

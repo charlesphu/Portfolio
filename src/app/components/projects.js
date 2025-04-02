@@ -35,25 +35,21 @@ export default function Projects() {
             name="Solar Strife"
             description="Team-based strategic PVP sci-fi game featuring fully armed spacecraft with gyroscopic movement 
  with custom-modeled planes, ships, bases, and turrets with fully functional ship and player combat system "
-            websiteURL="https://speed-fill.vercel.app/"
-            sourceURL="https://github.com/charlesphu/SpeedFill"
+            websiteURL="roblox.com/games/8715055706/Solar-Strife "
             skills={["ROBLOX", "Lua / Luau", "Scripting", "Modeling"]}
           />
         </Stack>
         <Stack direction={{ xs: "column", sm: "row" }} spacing={15} padding={5}>
           <CardComponent
-            name="Speedfill"
-            description="asdjfkla;sdfjkla;sdjkfa;lsfjklasdfjlksad;"
-            websiteURL="https://speed-fill.vercel.app/"
-            sourceURL="https://github.com/charlesphu/SpeedFill"
-            skills={["React", "Next.js", "Javascript", "Supabase", "Gemini"]}
+            name="AI form detector"
+            description="Trained an AI model to validate squat, bench, and deadlift form by using Yolov8 achieving 85% accuracy in classification"
+            skills={["Yolo v8", "Transfer Learning", "Computer Vision"]}
           />
           <CardComponent
-            name="Speedfill"
-            description="asdjfkla;sdfjkla;sdjkfa;lsfjklasdfjlksad;"
-            websiteURL="https://speed-fill.vercel.app/"
-            sourceURL="https://github.com/charlesphu/SpeedFill"
-            skills={["React", "Next.js", "Javascript", "Supabase", "Gemini"]}
+            name="Multithreaded HTTP Server"
+            description="Designed and implemented a high-performance multithreaded HTTP server, enabling concurrent client request handling with robust multithreaded thread safety"
+            sourceURL="https://github.com/charlesphu/ "
+            skills={["C", "Regex"]}
           />
         </Stack>
       </Stack>
