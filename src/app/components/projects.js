@@ -32,11 +32,12 @@ export default function Projects() {
             skills={["React", "Next.js", "Javascript", "Supabase", "Gemini"]}
           />
           <CardComponent
-            name="Speedfill"
-            description="asdjfkla;sdfjkla;sdjkfa;lsfjklasdfjlksad;"
+            name="Solar Strife"
+            description="Team-based strategic PVP sci-fi game featuring fully armed spacecraft with gyroscopic movement 
+ with custom-modeled planes, ships, bases, and turrets with fully functional ship and player combat system "
             websiteURL="https://speed-fill.vercel.app/"
             sourceURL="https://github.com/charlesphu/SpeedFill"
-            skills={["React", "Next.js", "Javascript", "Supabase", "Gemini"]}
+            skills={["ROBLOX", "Lua / Luau", "Scripting", "Modeling"]}
           />
         </Stack>
         <Stack direction={{ xs: "column", sm: "row" }} spacing={15} padding={5}>
