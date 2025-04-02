@@ -6,7 +6,7 @@ import {
   Iconbar,
 } from "./icons";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
-import { Box, Divider, Stack, Typography } from "@mui/material";
+import { Box, Divider, IconButton, Stack, Typography } from "@mui/material";
 
 export default function Contact() {
   return (
@@ -14,7 +14,7 @@ export default function Contact() {
       <Box
         sx={{
           minHeight: "100vh",
-          bgcolor: "yellow",
+          bgcolor: "#f4f4f5",
           display: "flex",
           flexDirection: "column",
           color: "black",
@@ -58,7 +58,7 @@ export default function Contact() {
                 linkedin.com/in/charles--phu-
               </a>
             </Typography>
-            <Typography sx={{ textDecoration: "underline" }}>
+            <Typography variant="body2" sx={{ textDecoration: "underline" }}>
               <EmailIconButton />
               <a
                 href="mailto:charlesphu18@gmail.com"
@@ -68,9 +68,10 @@ export default function Contact() {
                 charlesphu18@gmail.com
               </a>
             </Typography>
-            <Typography>
-              {" "}
-              <LocalPhoneIcon />
+            <Typography variant="body2" sx={{ textDecoration: "underline" }}>
+              <IconButton sx={{ color: "black" }}>
+                <LocalPhoneIcon />
+              </IconButton>
               <a
                 href="tel:+1510-458-1787"
                 rel="noopener noreferrer"

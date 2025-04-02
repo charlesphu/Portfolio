@@ -7,7 +7,7 @@ import {
   Button,
   Chip,
   Box,
-  Stack,
+  Divider,
 } from "@mui/material";
 import { GithubIconButton } from "./icons";
 import LanguageIcon from "@mui/icons-material/Language";
@@ -32,18 +32,26 @@ export function CardComponent({
     <Box
       sx={{
         width: "100%",
-        maxHeight: "600px",
-        overflow: "auto",
+        maxWidth: "650px",
+        // overflow: "auto",
+        overflowY: "visible",
       }}
     >
       <Card
         sx={{
-          backgroundColor: "grey",
+          backgroundColor: "#95A3B3",
           display: "flex",
           flexDirection: "column",
-          padding: "15px",
-          overflow: "auto",
-          borderRadius: "10px", // Adds rounded edges
+          padding: "20px",
+          // overflow: "auto",
+          borderRadius: "14px",
+          boxShadow: "10px",
+          "&:hover": {
+            backgroundColor: "#5E6F82",
+            position: "relative",
+            // outline: "20px solid rgba(202, 17, 17, 0.1)",
+            boxShadow: "0px 6px 25px rgb(50, 52, 72)",
+          },
         }}
       >
         <Box
@@ -63,16 +71,36 @@ export function CardComponent({
               maxHeight: "480px",
               height: "auto",
               objectFit: "cover",
-              borderRadius: "4px", // Adds rounded edges
+              borderRadius: "6px", // Adds rounded edges
             }}
           />
         </Box>
-        <Box>
+        <Box sx={{ width: "100%" }}>
           <CardContent>
-            <Typography variant="h3" fontWeight="bold" gutterBottom>
+            <Typography
+              variant="h3"
+              fontWeight="bold"
+              gutterBottom
+              sx={{ color: "#3B3D54" }}
+            >
               {name}
             </Typography>
-            <Typography variant="h6" gutterBottom>
+            <Divider
+              sx={{
+                width: "100%",
+                borderWidth: "1px",
+                marginBottom: "15px",
+              }}
+            />
+            <Typography
+              variant="h6"
+              gutterBottom
+              sx={{
+                color: "#F5F5F5",
+                wordWrap: "break-word",
+                overflowWrap: "break-word",
+              }}
+            >
               {description}
             </Typography>
             <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1, mt: 2 }}>
@@ -80,7 +108,7 @@ export function CardComponent({
                 <Chip
                   key={tech}
                   label={tech}
-                  sx={{ bgcolor: "#333", color: "#fff" }}
+                  sx={{ bgcolor: "#3B3D54", color: "#F5F5F5" }}
                 />
               ))}
             </Box>
@@ -92,7 +120,11 @@ export function CardComponent({
                 width: "100%", // Ensures proper spacing
               }}
             >
-              <Button variant="contained" startIcon={<LanguageIcon />}>
+              <Button
+                variant="contained"
+                startIcon={<LanguageIcon />}
+                sx={{ bgcolor: "#3B3D54", borderRadius: 3, color: "#F5F5F5" }}
+              >
                 {websiteURL}
               </Button>
               <GithubIconButton url={sourceURL} />
@@ -103,114 +135,3 @@ export function CardComponent({
     </Box>
   );
 }
-
-// <Box
-//   sx={{
-//     display: "flex",
-//     justifyContent: "center",
-//     alignItems: "center",
-//     flexDirection: "column",
-//     maxHeight: "33vh",
-//     width: "80%",
-//     bgcolor: "black",
-//     margin: "10px",
-//     color: "#fff",
-//   }}
-// >
-//   <Card
-//     sx={{
-//       backgroundColor: "grey",
-//       width: "100%",
-//       height: "100%",
-//       display: "flex",
-//       flexDirection: "column",
-//       color: "#fff",
-//       margin: "2vh",
-//     }}
-//   >
-//     <Box
-//       sx={{
-//         display: "flex",
-//         alignItems: "center",
-//         justifyContent: "center",
-//         position: "relative",
-//         maxHeight: "50%",
-//       }}
-//     >
-//       <Stack
-//         direction="row"
-//         sx={{
-//           alignItems: "center",
-//           justifyContent: "center",
-//           width: "100%",
-//           height: "auto",
-//         }}
-//       >
-//         <IconButton
-//           onClick={handlePrev}
-//           sx={{
-//             backgroundColor: "rgba(0,0,0,0.5)",
-//             color: "white",
-//             left: "0%",
-//           }}
-//         >
-//           <ArrowBackIosIcon />
-//         </IconButton>
-
-//         <CardMedia
-//           component="img"
-//           image="/SpeedfillHomePage.png"
-//           alt="Preview"
-//           sx={{
-//             maxHeight: "300px",
-//             width: "auto",
-//             maxWidth: "80%",
-//             objectFit: "contain",
-//             flexShrink: 0,
-//           }}
-//         />
-
-//         <IconButton
-//           onClick={handleNext}
-//           sx={{
-//             backgroundColor: "rgba(0,0,0,0.5)",
-//             color: "white",
-//           }}
-//         >
-//           <ArrowForwardIosIcon />
-//         </IconButton>
-//       </Stack>
-//     </Box>
-//     <CardContent>
-//       <Typography variant="h3" fontWeight="bold" gutterBottom>
-//         {name}
-//       </Typography>
-//       <Typography variant="h6" gutterBottom>
-//         {description}
-//       </Typography>
-//       <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1, mt: 2 }}>
-//         {skills.map((tech) => (
-//           <Chip
-//             key={tech}
-//             label={tech}
-//             sx={{ bgcolor: "#333", color: "#fff" }}
-//           />
-//         ))}
-//       </Box>
-//       <Box sx={{ display: "flex", justifyContent: "space-between", mt: 3 }}>
-//         <Typography>
-//           <WebsiteIconButton url={websiteURL} />
-//           <a href={websiteURL} target="_blank" rel="noopener noreferrer">
-//             Website
-//           </a>
-//         </Typography>
-//         <Typography>
-//           <GithubIconButton url={sourceURL} />
-//           <a href={sourceURL} target="_blank" rel="noopener noreferrer">
-//             Source
-//           </a>
-//         </Typography>
-//       </Box>
-//     </CardContent>
-//   </Card>
-// </Box>

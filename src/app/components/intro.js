@@ -7,12 +7,12 @@ export default function Intro() {
       <Box
         sx={{
           minHeight: "100vh",
-          bgcolor: "#FFF0DC",
+          bgcolor: "#f4f4f5",
           display: "flex",
           flexDirection: "column",
         }}
       >
-        <AppBar
+        {/* <AppBar
           position="static"
           sx={{
             height: "10%",
@@ -47,7 +47,7 @@ export default function Intro() {
               Contact
             </Button>
           </Stack>
-        </AppBar>
+        </AppBar> */}
 
         <Box
           sx={{

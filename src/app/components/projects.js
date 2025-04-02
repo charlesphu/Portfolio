@@ -1,19 +1,22 @@
-import { Box, Card, Grid, Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import { CardComponent } from "./card";
 export default function Projects() {
   return (
     <Box
       sx={{
         minHeight: "100vh",
-        bgcolor: "purple",
+        bgcolor: "#CFD0DD",
         display: "flex",
         flexDirection: "column",
         color: "black",
         alignItems: "center",
       }}
     >
-      <Typography variant="h1" sx={{ padding: "2rem" }}>
-        Projects
+      <Typography
+        variant="h1"
+        sx={{ padding: "2rem", letterSpacing: "-0.02em" }}
+      >
+        Projects - Experience
       </Typography>
       <Stack sx={{ width: "100%", alignItems: "center" }}>
         <Stack
@@ -23,7 +26,7 @@ export default function Projects() {
         >
           <CardComponent
             name="Speedfill"
-            description="asdjfkla;sdfjkla;sdjkfa;lsfjklasdfjlksad;"
+            description=" AI-powered job application assistant that analyzes resumes and generates tailored cover letters based on job descriptions. Built with Next.js, Material UI, Google Gemini AI, and Supabase, SpeedFill streamlines the application process to help job seekers save time and increase their chances of landing interviews"
             websiteURL="https://speed-fill.vercel.app/"
             sourceURL="https://github.com/charlesphu/SpeedFill"
             skills={["React", "Next.js", "Javascript", "Supabase", "Gemini"]}
@@ -53,13 +56,6 @@ export default function Projects() {
           />
         </Stack>
       </Stack>
-      {/* <CardComponent
-        name="Speedfill"
-        description="asdjfkla;sdfjkla;sdjkfa;lsfjklasdfjlksad;"
-        websiteURL="https://speed-fill.vercel.app/"
-        sourceURL="https://github.com/charlesphu/SpeedFill"
-        skills={["React", "Next.js", "Javascript", "Supabase", "Gemini"]}
-      /> */}
     </Box>
   );
 }
