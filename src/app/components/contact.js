@@ -14,7 +14,7 @@ export default function Contact() {
       <Box
         sx={{
           minHeight: "100vh",
-          bgcolor: "#f4f4f5",
+          bgcolor: "#CFD0DD",
           display: "flex",
           flexDirection: "column",
           color: "black",

@@ -6,7 +6,7 @@ export default function AboutMe() {
     <Box
       sx={{
         minHeight: "100vh",
-        bgcolor: "#f4f4f5",
+        bgcolor: "#CFD0DD",
         display: "flex",
         alignItems: "center",
         flexDirection: "column",
