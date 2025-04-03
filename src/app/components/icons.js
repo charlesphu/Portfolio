@@ -10,9 +10,9 @@ export function GithubIconButton({ url }) {
   return (
     <IconButton
       onClick={() => window.open(url, "_blank")}
-      sx={{ color: "black" }}
+      sx={{ color: "black", fontSize: "2rem" }}
     >
-      <GitHubIcon />
+      <GitHubIcon sx={{ fontSize: "2rem" }} />
     </IconButton>
   );
 }
@@ -22,7 +22,7 @@ export function WebsiteIconButton({ url }) {
       onClick={() => window.open(url, "_blank")}
       sx={{ color: "black" }}
     >
-      <LanguageIcon />
+      <LanguageIcon sx={{ fontSize: "2rem" }} />
     </IconButton>
   );
 }
@@ -34,7 +34,7 @@ export function LinkedInIconButton() {
       }
       sx={{ color: "black" }}
     >
-      <LinkedInIcon />
+      <LinkedInIcon sx={{ fontSize: "2rem" }} />
     </IconButton>
   );
 }
@@ -44,7 +44,7 @@ export function EmailIconButton() {
       onClick={() => window.open("mailto:charlesphu18@gmail.com", "_blank")}
       sx={{ color: "black" }}
     >
-      <EmailIcon />
+      <EmailIcon sx={{ fontSize: "2rem" }} />
     </IconButton>
   );
 }

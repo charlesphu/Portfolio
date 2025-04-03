@@ -38,7 +38,8 @@ export default function Projects() {
  with custom-modeled planes, ships, bases, and turrets with fully functional ship and player combat system "
             websiteURL="roblox.com/games/8715055706/Solar-Strife "
             skills={["ROBLOX", "Lua / Luau", "Scripting", "Modeling"]}
-            image="./SolarStrife.webp"
+            image="./solarStrifeFighting.gif"
+            // image="./SolarStrife.webp"
           />
         </Stack>
         <Stack direction={{ xs: "column", sm: "row" }} spacing={15} padding={5}>
