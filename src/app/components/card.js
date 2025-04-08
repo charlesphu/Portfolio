@@ -18,6 +18,7 @@ export function CardComponent({
   skills,
   websiteURL,
   sourceURL,
+  image,
 }) {
   const handleNext = () => {
     // setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -64,7 +65,7 @@ export function CardComponent({
         >
           <CardMedia
             component="img"
-            image="/SpeedfillHomePage.png"
+            image={image}
             alt="Preview"
             sx={{
               maxWidth: "640px",

@@ -14,7 +14,7 @@ export default function Contact() {
       <Box
         sx={{
           minHeight: "100vh",
-          bgcolor: "#f4f4f5",
+          bgcolor: "#CFD0DD",
           display: "flex",
           flexDirection: "column",
           color: "black",
@@ -70,7 +70,7 @@ export default function Contact() {
             </Typography>
             <Typography variant="body2" sx={{ textDecoration: "underline" }}>
               <IconButton sx={{ color: "black" }}>
-                <LocalPhoneIcon />
+                <LocalPhoneIcon sx={{ fontSize: "2rem" }} />
               </IconButton>
               <a
                 href="tel:+1510-458-1787"

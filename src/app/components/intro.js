@@ -7,7 +7,8 @@ export default function Intro() {
       <Box
         sx={{
           minHeight: "100vh",
-          bgcolor: "#f4f4f5",
+          // bgcolor: "#f4f4f5",
+          bgcolor: "#CFD0DD",
           display: "flex",
           flexDirection: "column",
         }}
