@@ -124,6 +124,7 @@ export function CardComponent({
                 <Button
                   variant="contained"
                   startIcon={<LanguageIcon />}
+                  onClick={() => window.open(websiteURL, "_blank")}
                   sx={{ bgcolor: "#3B3D54", borderRadius: 3, color: "#F5F5F5" }}
                 >
                   {websiteURL}
