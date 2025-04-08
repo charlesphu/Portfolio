@@ -36,7 +36,7 @@ export default function Projects() {
             name="Solar Strife"
             description="Team-based strategic PVP sci-fi game featuring fully armed spacecraft with gyroscopic movement 
  with custom-modeled planes, ships, bases, and turrets with fully functional ship and player combat system "
-            websiteURL="roblox.com/games/8715055706/Solar-Strife "
+            websiteURL="https://roblox.com/games/8715055706/Solar-Strife "
             skills={["ROBLOX", "Lua / Luau", "Scripting", "Modeling"]}
             image="./solarStrifeFighting.gif"
             // image="./SolarStrife.webp"
