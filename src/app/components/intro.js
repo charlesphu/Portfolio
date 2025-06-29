@@ -9,18 +9,42 @@ gsap.registerPlugin(useGSAP, SplitText);
 
 export default function Intro() {
   const nameRef = useRef(null);
+  const descRef = useRef(null);
+  const barRef = useRef(null);
 
   useGSAP(
     () => {
       const split = new SplitText(nameRef.current, { type: "chars" });
 
-      gsap.from(split.chars, {
+      const tl = gsap.timeline();
+
+      tl.from(split.chars, {
         duration: 1.5,
         y: 60,
         opacity: 0,
         stagger: 0.05,
         ease: "back.out(1.7)",
-      });
+      })
+        .from(
+          descRef.current,
+          {
+            duration: 1.5,
+            y: 60,
+            opacity: 0,
+            stagger: 0.05,
+            ease: "back.out(1.7)",
+          },
+          ">-1"
+        )
+        .to(
+          barRef.current,
+          {
+            width: "50%",
+            duration: 2,
+            ease: "power2.out",
+          },
+          ">-1"
+        );
 
       return () => split.revert();
     },
@@ -32,15 +56,18 @@ export default function Intro() {
       <h1 ref={nameRef} className="text-5xl font-serif text-[#543A14]">
         Charles Phu
       </h1>
-      <h2 className="text-3xl text-[#543A14]">Software Engineer</h2>
+      <h2 ref={descRef} className="text-3xl text-[#543A14]">
+        Software Engineer
+      </h2>
 
-      <Divider
+      <div ref={barRef} className="h-1 bg-[#543A14] mt-2 origin-left w-0" />
+      {/* <Divider
         sx={{
           bg: "#F0BB78",
           width: "50%",
           margin: "2rem 0",
         }}
-      />
+      /> */}
       <Iconbar />
     </div>
   );
