@@ -1,18 +1,39 @@
-import Box from "@mui/material/Box";
+"use client";
+import { useEffect, useRef } from "react";
 import { AppBar, Button, Divider, Stack, Typography } from "@mui/material";
 import { Iconbar } from "./icons";
+import { SplitText } from "gsap/SplitText";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+gsap.registerPlugin(useGSAP, SplitText);
+
 export default function Intro() {
+  const nameRef = useRef(null);
+
+  useGSAP(
+    () => {
+      const split = new SplitText(nameRef.current, { type: "chars" });
+
+      gsap.from(split.chars, {
+        duration: 1.5,
+        y: 60,
+        opacity: 0,
+        stagger: 0.05,
+        ease: "back.out(1.7)",
+      });
+
+      return () => split.revert();
+    },
+    { scope: nameRef }
+  );
+
   return (
     <div className="h-screen bg-[#CFD0DD] flex flex-col justify-center items-center">
-      <Typography
-        variant="h1"
-        sx={{ color: "#543A14", fontFamily: "Merriweather" }}
-      >
+      <h1 ref={nameRef} className="text-5xl font-serif text-[#543A14]">
         Charles Phu
-      </Typography>
-      <Typography variant="h2" sx={{ color: "#543A14" }}>
-        Software Engineer
-      </Typography>
+      </h1>
+      <h2 className="text-3xl text-[#543A14]">Software Engineer</h2>
+
       <Divider
         sx={{
           bg: "#F0BB78",
