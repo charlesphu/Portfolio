@@ -1,19 +1,40 @@
+"use client";
 import Box from "@mui/material/Box";
 import { Typography } from "@mui/material";
+import { useRef, useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ScrollingTechWindow from "./scrolling";
+import { useGSAP } from "@gsap/react";
+gsap.registerPlugin(ScrollTrigger);
+
 export default function AboutMe() {
+  const fadeRef = useRef(null);
+
+  useGSAP(
+    () => {
+      gsap.fromTo(
+        fadeRef.current,
+        { opacity: 0, x: -40 },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 3,
+          scrollTrigger: {
+            trigger: fadeRef.current,
+            start: "top bottom",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    },
+    { scope: fadeRef }
+  );
+
   return (
-    <Box
-      sx={{
-        minHeight: "100vh",
-        bgcolor: "#CFD0DD",
-        display: "flex",
-        alignItems: "center",
-        flexDirection: "column",
-      }}
-    >
+    <div className="h-screen bg-[#CFD0DD] flex flex-col justify-center items-center">
       <Box width="80%" margin="auto">
-        <Typography variant="h2" paddingTop={4}>
+        <Typography ref={fadeRef} variant="h2" paddingTop={4}>
           A Little Intro:
         </Typography>
         <Typography variant="h5" paddingTop={2} paddingBottom={4}>
@@ -36,6 +57,6 @@ export default function AboutMe() {
         </Typography>
         <ScrollingTechWindow />
       </Box>
-    </Box>
+    </div>
   );
 }
