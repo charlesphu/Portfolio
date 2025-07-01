@@ -82,16 +82,11 @@ export default function AboutMe() {
 
   return (
     <div className="h-screen bg-[#CFD0DD] flex flex-col justify-center items-center">
-      <Box width="80%" margin="auto">
-        <Typography ref={introRef} variant="h2" paddingTop={4}>
+      <div className="w-[80%] m-auto">
+        <p ref={introRef} className="py-4 text-5xl">
           A Little Intro:
-        </Typography>
-        <Typography
-          ref={introDescRef}
-          variant="h5"
-          paddingTop={2}
-          paddingBottom={4}
-        >
+        </p>
+        <p ref={introDescRef} className="text-xl">
           I graduated high school at 16 with the highest cumulative GPA and am
           on track to earn my bachelor’s degree from UCSC at 20—reflecting my
           discipline, enthusiasm, and relentless drive for self-improvement. I
@@ -100,17 +95,17 @@ export default function AboutMe() {
           and fitness. I’d love the opportunity to apply my skills and
           contribute to your team. Looking forward to the possibility of working
           together!
-        </Typography>
-        <Typography ref={skillsRef} variant="h2" paddingBottom={2}>
+        </p>
+        <p ref={skillsRef} className="py-4 text-5xl">
           Skills:
-        </Typography>
-        <Typography ref={skillsDescRef} variant="h6">
+        </p>
+        <p ref={skillsDescRef} className="text-xl">
           React, Next.js, JavaScript, Python, C++, SQL, Git, Supabase,
           Material-UI, Node.js, PostgreSQL, Firebase, Vercel, Docker,
           Agile/Scrum, CI/CD.
-        </Typography>
+        </p>
         <ScrollingTechWindow />
-      </Box>
+      </div>
     </div>
   );
 }
