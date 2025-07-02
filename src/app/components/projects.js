@@ -5,7 +5,7 @@ export default function Projects() {
     <Box
       sx={{
         minHeight: "100vh",
-        bgcolor: "#CFD0DD",
+        bgcolor: "clear",
         display: "flex",
         flexDirection: "column",
         color: "black",

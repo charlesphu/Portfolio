@@ -66,7 +66,7 @@ export default function ScrollingTechWindow() {
         height: "100px",
         display: "flex",
         alignItems: "center",
-        backgroundColor: "#CFD0DD",
+        backgroundColor: "clear",
         position: "relative",
         whiteSpace: "nowrap",
         cursor: isDragging ? "grabbing" : "grab",
