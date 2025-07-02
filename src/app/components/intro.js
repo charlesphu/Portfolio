@@ -59,7 +59,7 @@ export default function Intro() {
   );
 
   return (
-    <div className="h-screen bg-[#CFD0DD] flex flex-col justify-center items-center">
+    <div className="h-screen bg-clear flex flex-col justify-center items-center">
       <img
         src="/profilePic.jpg"
         className="rounded-full py-4 w-40"
@@ -74,7 +74,7 @@ export default function Intro() {
 
       <div
         ref={barRef}
-        className="h-1 bg-[#543A14] mt-2 origin-left w-0 my-4 mt-6"
+        className="h-1 bg-clear mt-2 origin-left w-0 my-4 mt-6"
       />
       {/* <Divider
         sx={{

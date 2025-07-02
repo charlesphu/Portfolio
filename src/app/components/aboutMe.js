@@ -19,7 +19,7 @@ export default function AboutMe() {
       gsap.from(introRef.current, {
         x: -75,
         opacity: 0,
-        duration: 2,
+        duration: 1.5,
         scrollTrigger: {
           trigger: introRef.current,
           start: "top bottom",
@@ -35,7 +35,7 @@ export default function AboutMe() {
       gsap.from(introDescRef.current, {
         x: 100,
         opacity: 0,
-        duration: 2,
+        duration: 1.5,
         scrollTrigger: {
           trigger: introDescRef.current,
           start: "top bottom",
@@ -51,7 +51,7 @@ export default function AboutMe() {
       gsap.from(skillsRef.current, {
         x: -75,
         opacity: 0,
-        duration: 3,
+        duration: 2,
         delay: 0.25,
         scrollTrigger: {
           trigger: skillsRef.current,
@@ -68,7 +68,7 @@ export default function AboutMe() {
       gsap.from(skillsDescRef.current, {
         x: 100,
         opacity: 0,
-        duration: 3,
+        duration: 2,
         delay: 0.25,
         scrollTrigger: {
           trigger: skillsDescRef.current,
@@ -81,7 +81,7 @@ export default function AboutMe() {
   );
 
   return (
-    <div className="h-screen bg-[#CFD0DD] flex flex-col justify-center items-center">
+    <div className="h-screen bg-clear flex flex-col justify-center items-center">
       <div className="w-[80%] m-auto">
         <p ref={introRef} className="py-4 text-5xl">
           A Little Intro:
