@@ -12,12 +12,7 @@ export default function Projects() {
         alignItems: "center",
       }}
     >
-      <Typography
-        variant="h1"
-        sx={{ padding: "2rem", letterSpacing: "-0.02em" }}
-      >
-        Projects - Experience
-      </Typography>
+      <p className="text-7xl text-bold pt-20 pb-10">Projects - Experience</p>
       <Stack sx={{ width: "100%", alignItems: "center" }}>
         <Stack
           direction={{ xs: "column", sm: "row", width: "90%" }}

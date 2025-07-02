@@ -11,7 +11,14 @@ export default function Intro() {
   const nameRef = useRef(null);
   const descRef = useRef(null);
   const barRef = useRef(null);
+  const imgRef = useRef(null);
 
+  useGSAP(() => {
+    gsap.from(imgRef.current, {
+      opacity: 0,
+      duration: 2,
+    });
+  });
   useGSAP(
     () => {
       const split = new SplitText(nameRef.current, { type: "chars" });
@@ -53,6 +60,11 @@ export default function Intro() {
 
   return (
     <div className="h-screen bg-[#CFD0DD] flex flex-col justify-center items-center">
+      <img
+        src="/profilePic.jpg"
+        className="rounded-full py-4 w-40"
+        ref={imgRef}
+      ></img>
       <h1 ref={nameRef} className="text-5xl font-serif text-[#543A14]">
         Charles Phu
       </h1>
@@ -60,7 +72,10 @@ export default function Intro() {
         Software Engineer
       </h2>
 
-      <div ref={barRef} className="h-1 bg-[#543A14] mt-2 origin-left w-0" />
+      <div
+        ref={barRef}
+        className="h-1 bg-[#543A14] mt-2 origin-left w-0 my-4 mt-6"
+      />
       {/* <Divider
         sx={{
           bg: "#F0BB78",
