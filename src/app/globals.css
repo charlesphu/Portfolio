@@ -5,7 +5,6 @@
   --gradient-color-3: #5e5c64;
   --gradient-color-4: #77767b;
 
-  /* Custom blur strength (you can override this with inline style or JS) */
   --blur-strength: 10px;
 
   position: fixed;
