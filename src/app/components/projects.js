@@ -28,6 +28,13 @@ export default function Projects() {
             image="./SpeedfillHomePage.png"
           />
           <CardComponent
+            name="Ant War"
+            description="Four-team strategy game centered around competing ant colonies. The game includes mechanics such as tunneling, combat, custom models, and unique abilities"
+            websiteURL="https://www.roblox.com/games/11157166793/Ant-War"
+            skills={["ROBLOX", "Lua / Luau", "Scripting", "Modeling"]}
+            image="./antWar.png"
+          />
+          <CardComponent
             name="Solar Strife"
             description="Team-based strategic PVP sci-fi game featuring fully armed spacecraft with gyroscopic movement 
  with custom-modeled planes, ships, bases, and turrets with fully functional ship and player combat system "
