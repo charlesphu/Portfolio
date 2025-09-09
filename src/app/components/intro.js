@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useRef } from "react";
-import { AppBar, Button, Divider, Stack, Typography } from "@mui/material";
 import { Iconbar } from "./icons";
 import { SplitText } from "gsap/SplitText";
 import gsap from "gsap";
@@ -69,7 +68,7 @@ export default function Intro() {
         Charles Phu
       </h1>
       <h2 ref={descRef} className="text-3xl text-[#543A14]">
-        Software Engineer
+        Sytems Engineer <a href="https://www.supermicro.com/en/" target="_blank" className="font-semibold underline underline-offset-7">@Supermicro</a>
       </h2>
 
       <div

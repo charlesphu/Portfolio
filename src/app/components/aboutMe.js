@@ -1,6 +1,4 @@
 "use client";
-import Box from "@mui/material/Box";
-import { Typography } from "@mui/material";
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
