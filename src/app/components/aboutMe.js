@@ -85,8 +85,7 @@ export default function AboutMe() {
           A Little Intro:
         </p>
         <p ref={introDescRef} className="text-xl">
-          I graduated high school at 16 with the highest cumulative GPA and am
-          on track to earn my bachelor’s degree from UCSC at 20—reflecting my
+          I graduated high school at 16 with the highest cumulative GPA and earned my bachelor’s degree from UCSC at 20—reflecting my
           discipline, enthusiasm, and relentless drive for self-improvement. I
           thrive on challenges and have an insatiable curiosity for
           learning—whether in technical skills, practical life skills, or health
