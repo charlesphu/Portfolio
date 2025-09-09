@@ -68,7 +68,7 @@ export default function Intro() {
         Charles Phu
       </h1>
       <h2 ref={descRef} className="text-3xl text-[#543A14]">
-        Sytems Engineer <a href="https://www.supermicro.com/en/" target="_blank" className="font-semibold underline underline-offset-7">@Supermicro</a>
+        Sytems Engineer <a href="https://www.supermicro.com/en/" target="_blank" className="text-blue-600 font-semibold underline underline-offset-7">@Supermicro</a>
       </h2>
 
       <div

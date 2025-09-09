@@ -2,3 +2,4 @@
 1. add resume
 1. transition cards to tailwindcss
 1. animations to cards
+1. cards should not show full link
