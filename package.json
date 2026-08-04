@@ -19,7 +19,7 @@
     "@mui/material": "^7.0.0",
     "@tailwindcss/postcss": "^4.1.11",
     "mui": "^0.0.1",
-    "next": "15.2.4",
+    "next": "15.2.8",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "whatamesh": "^0.2.0"
